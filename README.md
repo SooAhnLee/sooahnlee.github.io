@@ -1,128 +1,51 @@
-# AP  [![Build Status](https://travis-ci.org/kssim/ap.svg?branch=master)](https://travis-ci.org/kssim/ap.svg?branch=master)
-"AP" is [Jekyll](https://jekyllrb.com/) theme for career. This theme is free and open-source.  
-Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few new features:  
-* SNS Link
-* Google Analytics
-* Responsive design
-* Upgrading awesome fonts and modifying some layouts.
-* Use "About" as main.
-  * It can be written in simple resume form.
-* Change "Post" to "Project Portfolio"
-  * You can manage your project experience just like running a blog.
+# Academic Pages
 
+![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
 
-# Preview
-[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
+Academic Pages is a Github Pages template for academic websites.
 
+# Getting Started
 
-# Usage
-1. Fork and clone the AP repo:
-    * git clone https://github.com/kssim/ap.git
-2. Install Jekyll:
-    * gem install jekyll
-3. Install the theme's dependencies
-    * bundle install
-4. Customize the theme
-    * update _config.yml
-5. Run the Jekyll server
-    * jekyll serve
+1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
+1. Click the "Use this template" button in the top right.
+1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
+1. Set site-wide configuration and add your content.
+1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
+1. Check status by going to the repository settings, in the "GitHub pages" section
+1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
+See more info at https://academicpages.github.io/
 
-## Structure
-* Here are the main files of the template
-```bash
-ap
-├── _includes                  # theme includes
-├── _layouts                   # theme layouts (see below for details)
-├── _posts                     # Project & Portfolio posts
-├── _sass                      # Sass partials 
-├── portfolio                  # Main page for "portfolio"
-├── assets
-|  ├── css                     # font-awesome and main css
-|  ├── fonts                   # Font-Awesome
-|  ├── favicon.ico             # Favicon
-|  └── img                     # Images used for "about" page
-├── _config.yml                # sample configuration
-└── index.md                   # Resume to show on "about" page
-```
+## Running Locally
 
-## Configure AP
-Open _config.yml in a text editor to change most of the blog's settings.
+When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
 
+1. Clone the repository and made updates as detailed above.
+1. Make sure you have ruby-dev, bundler, and nodejs installed
+    
+    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
+    ```bash
+    sudo apt install ruby-dev ruby-bundler nodejs
+    ```
+    On MacOS the commands are:
+    ```bash
+    brew install ruby
+    brew install node
+    gem install bundler
+    ```
+1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
-### Site Configuration
-Configure Jekyll as your own blog or with a subpath in in _config.yml:  
-```yml
-title: [Website Title]
-baseurl: [Website Subpath]
-url: [Github Page Url]
-google_analytics: [Google Analytics Tracking ID]
-```
-Please configure this before using the theme.  
-And to enable Google Analytics, add your [Traking ID](https://support.google.com/analytics/answer/1008080?visit_id=1-636579797402349951-2693679291&rd=1)
+If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
 
+# Maintenance
 
+Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
 
-### About You
-Meta variables hold basic information about your profile and resume.  
-Change these variables in _config.yml:  
-```yml
-author:
-  name: [Your Name]
-  desc: [Short introduction]
-  email: [Your E-Mail Address]
-  selfie: [Your Avatar]
-```
-Please configure this before using the theme.
+This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
 
+## Bugfixes and enhancements
 
+If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
 
-### SNS Information
-Your SNS information to display at the bottom of the page.  
-All values except "email" are text values.  
-```yml
-social:
-  email: true
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  github: 
-  google_plus:
-  instagram:
-  keybase:
-  linkedin:
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:
-  steam:
-  tumblr:
-  gitlab:
-  twitter: 
-  vimeo:
-  wordpress:
-  youtube:
-  default_txt: "Follow On"
-```
-
-
-## Portfolio Schema
-```markdown
----
-layout: post
-title:  [Project title to show in portfolio list]
-info: [A brief introduction to show in portfolio list]
-tech: [The technologies used in the project to show in portfolio list]
-type: [Property of the project to be displayed in front of the project's info(toy or company name)]
----
-```
-
-## Other formats
-It uses the markdown syntax by default, and there is no format other than the one mentioned above.  
-You can use it as you like.  
-
-
-## License
-[The MIT License (MIT)](https://raw.githubusercontent.com/kssim/ap/master/LICENSE)
+Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
