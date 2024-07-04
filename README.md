@@ -1,80 +1,128 @@
-# Vitae
-
-[![Build Status](https://github.com/jekyllt/vitae/actions/workflows/jekyll_build.yml/badge.svg)](https://github.com/jekyllt/vitae/actions/workflows/jekyll_build.yml)
-[![Ruby](https://img.shields.io/badge/ruby-2.6.3-blue.svg?style=flat)](http://travis-ci.org/jekyllt/vitae)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.9.0-blue.svg?style=flat)](http://travis-ci.org/jekyllt/vitae)
-
-Personal homepage (curriculum vitae or resume) based on [João's](https://github.com/joaomoreno/resume).
-Vitae is built with [skeleton](http://getskeleton.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
-hosted in [Github pages](https://pages.github.com/).
-
-
-## View the live demo
-
-[Vitae Live Demo](https://jekyllt.github.io/vitae)
+# AP  [![Build Status](https://travis-ci.org/kssim/ap.svg?branch=master)](https://travis-ci.org/kssim/ap.svg?branch=master)
+"AP" is [Jekyll](https://jekyllrb.com/) theme for career. This theme is free and open-source.  
+Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few new features:  
+* SNS Link
+* Google Analytics
+* Responsive design
+* Upgrading awesome fonts and modifying some layouts.
+* Use "About" as main.
+  * It can be written in simple resume form.
+* Change "Post" to "Project Portfolio"
+  * You can manage your project experience just like running a blog.
 
 
-## Screenshots
-
-![resume page](https://raw.githubusercontent.com/jekyllt/vitae/gh-pages/assets/images/vitae_screen.png)
-
-
-### Deployment
-
-There are several alternatives to building and deploying the site:
-
-1. build the site with [GitHub Actions](https://github.com/features/actions) which pushes 
-the resulting files (the contents of `_site/` or `../vitae-pages/`) 
-to the *gh-pages* branch. This is the approach that is currently used. See 
-[jekyll_build.yml](.github/workflows/jekyll_build.yml) for more details.
-
-2. generate the site locally (more details below) and push the resulting
-HTML to a Github repository, that GitHub Pages then host;
-
-3. build the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
-
-4. deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
-
-For option **2)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../vitae-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyllt/vitae/tree/gh-pages)).
-
-For option **3)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
-
-## Issues and contributing
-
-This install builds well with Ruby v2.6.3 and Jekyll v3.9.0. If you run into any problems please log them on the [issue tracker](https://github.com/jekyllt/vitae/issues).
-
-Feel free pull-request your patches and fixes.
+# Preview
+[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
 
 
-## Thanks
+# Usage
+1. Fork and clone the AP repo:
+    * git clone https://github.com/kssim/ap.git
+2. Install Jekyll:
+    * gem install jekyll
+3. Install the theme's dependencies
+    * bundle install
+4. Customize the theme
+    * update _config.yml
+5. Run the Jekyll server
+    * jekyll serve
 
-A lot of the work had been already done by the Joao. Many thanks to him :smile:
 
-Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
+## Structure
+* Here are the main files of the template
+```bash
+ap
+├── _includes                  # theme includes
+├── _layouts                   # theme layouts (see below for details)
+├── _posts                     # Project & Portfolio posts
+├── _sass                      # Sass partials 
+├── portfolio                  # Main page for "portfolio"
+├── assets
+|  ├── css                     # font-awesome and main css
+|  ├── fonts                   # Font-Awesome
+|  ├── favicon.ico             # Favicon
+|  └── img                     # Images used for "about" page
+├── _config.yml                # sample configuration
+└── index.md                   # Resume to show on "about" page
+```
+
+## Configure AP
+Open _config.yml in a text editor to change most of the blog's settings.
 
 
-## Copyright & License
+### Site Configuration
+Configure Jekyll as your own blog or with a subpath in in _config.yml:  
+```yml
+title: [Website Title]
+baseurl: [Website Subpath]
+url: [Github Page Url]
+google_analytics: [Google Analytics Tracking ID]
+```
+Please configure this before using the theme.  
+And to enable Google Analytics, add your [Traking ID](https://support.google.com/analytics/answer/1008080?visit_id=1-636579797402349951-2693679291&rd=1)
 
-Copyright (C) 2015-2021 - Released under the MIT License.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+### About You
+Meta variables hold basic information about your profile and resume.  
+Change these variables in _config.yml:  
+```yml
+author:
+  name: [Your Name]
+  desc: [Short introduction]
+  email: [Your E-Mail Address]
+  selfie: [Your Avatar]
+```
+Please configure this before using the theme.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+### SNS Information
+Your SNS information to display at the bottom of the page.  
+All values except "email" are text values.  
+```yml
+social:
+  email: true
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: 
+  google_plus:
+  instagram:
+  keybase:
+  linkedin:
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  gitlab:
+  twitter: 
+  vimeo:
+  wordpress:
+  youtube:
+  default_txt: "Follow On"
+```
+
+
+## Portfolio Schema
+```markdown
+---
+layout: post
+title:  [Project title to show in portfolio list]
+info: [A brief introduction to show in portfolio list]
+tech: [The technologies used in the project to show in portfolio list]
+type: [Property of the project to be displayed in front of the project's info(toy or company name)]
+---
+```
+
+## Other formats
+It uses the markdown syntax by default, and there is no format other than the one mentioned above.  
+You can use it as you like.  
+
+
+## License
+[The MIT License (MIT)](https://raw.githubusercontent.com/kssim/ap/master/LICENSE)
