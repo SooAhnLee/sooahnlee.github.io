@@ -1,7 +1,7 @@
 # Site settings
-title: A.P
-baseurl: "/ap"
-url: "https://kssim.github.io"
+title: Soo Ahn Lee, Ph.D. candidate
+baseurl: ""
+url: "https://github.com/SooAhnLee/sooahnlee.github.io"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
 # Author
@@ -9,33 +9,33 @@ author:
   name: Soo Ahn Lee
   desc: Ph.D. candidate at Sungkyunkwan University
   email: sooahnlee23@gmail.com
-  selfie: assets/img/SALee.PNG
+  selfie: assets/img/LeeSA.jpeg
 
 # social
 social:
-  email: true
-  behance:
-  bitbucket:
-  dribbble:
+  email: sooahnlee23@gmail.com
+  # behance:
+  # bitbucket:
+ # dribbble:
  # facebook: Test
-  flickr:
-  github: kssim
-  google_plus:
-  instagram:
-  keybase:
-  linkedin: https://www.linkedin.com/in/kssim/ 
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:
-  steam:
-  tumblr:
-  gitlab:
-  twitter: Test
-  vimeo:
-  wordpress:
-  youtube:
-  default_txt: "Follow On"
+ # flickr:
+  github: https://github.com/SooAhnLee
+ # google_plus:
+ # instagram:
+#  keybase:
+ # linkedin: https://www.linkedin.com/in/kssim/ 
+ # pinterest:
+ # reddit:
+ # soundcloud:
+ # stack_exchange:
+ # steam:
+ # tumblr:
+ # gitlab:
+  twitter: @SooAhnLee
+ # vimeo:
+ # wordpress:
+ # youtube:
+ # default_txt: "Follow On"
 
 # Build settings
 markdown: kramdown
