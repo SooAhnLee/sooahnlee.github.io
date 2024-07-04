@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-{{ site.baseurl }}{% link /assets/files/CV_SALee_2024Jun.pdf %}
+[Check out my CV here!]({{ site.baseurl }}{% link /assets/CV_SALee_2024Jun.pdf %})
