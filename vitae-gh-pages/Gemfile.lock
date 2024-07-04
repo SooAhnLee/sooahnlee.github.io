@@ -267,6 +267,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  concurrent-ruby (= 1.1.8)
   github-pages (~> 214)
   jekyll (~> 3.9.0)
 
